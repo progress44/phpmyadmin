@@ -321,3 +321,21 @@ CREATE TABLE IF NOT EXISTS `pma__central_columns` (
 )
   COMMENT='Central list of columns'
   DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+
+-- --------------------------------------------------------
+  
+--
+-- Table structure for table `pma__designer_coords`
+--
+
+CREATE TABLE IF NOT EXISTS `pma__designer_coords` (
+  `db_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `table_name` varchar(64) COLLATE utf8_bin NOT NULL DEFAULT '',
+  `x` int(11) DEFAULT NULL,
+  `y` int(11) DEFAULT NULL,
+  `v` tinyint(4) DEFAULT NULL,
+  `h` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`db_name`,`table_name`)
+) 
+COMMENT='Table coordinates for Designer'
+DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
